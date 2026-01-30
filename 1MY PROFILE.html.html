@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Animated 3D Portfolio — Combined Skills</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="profile.css" rel="stylesheet">
+
+  </head>
+<body class="theme-dark">
+
+  <!-- background layers -->
+  <div id="bg1" class="bg-layer"></div>
+  <div id="bg2" class="bg-layer"></div>
+
+  <!-- particle canvas (for animated skill cards and background) -->
+  <canvas id="particleCanvas" class="particle-canvas"></canvas>
+
+  <!-- topbar -->
+  <header class="topbar">
+    <div class="brand">My<span>Portfolio</span></div>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center">
+      <button id="themeToggle" class="icon-btn" title="Switch theme">Theme</button>
+      <button id="downloadResume" class="icon-btn">Resume</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1 class="name">MY PORTFOLIO</h1>
+        <div class="role"></div>
+        <div class="tagline">I build immersive interfaces, interactive pages and animated experiences — mixing 3D, motion and clean UX.</div>
+
+        <div class="cta-row">
+          <a class="btn primary" href="#projects">See Projects</a>
+          <a class="btn primary" href="#contact">Contact</a>
+        </div>
+
+        <div class="socials" style="margin-top:12px">
+          <a href="https://instagram.com/itz_anya_0687" 
+     target="_blank" 
+     class="pill insta-pill">
+     @Deeku_7860
+  </a>
+  <a href="#" class="pill">Deeku_7860</a><a href="#" class="pill">Education</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="card-3d" id="card3d">
+          <div class="card-inner">
+            <div class="avatar-wrap"><img src="photo.png" alt="avatar"></div>
+            <div class="card-info"><h3>Deeksha Verma</h3><p style="margin:6px 0;color:var(--muted)">Frontend Developer</p>
+              <div class="skill-pills"><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JS</span></div>
+            </div>
+            <div class="glow-layer" style="pointer-events:none"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section card">
+      <h2>About Me</h2>
+      <p>I create polished web experiences with motion and interactive 3D. Replace this with your biography.</p>
+      <div class="about-grid">
+        <div><strong>Location</strong><span>=Jhansi, India</span></div>
+        <div><strong>Experience</strong><span>=Fresher</span></div>
+        <div><strong>Education</strong><span>=B.Tech (Computer Science)</span></div>
+        <div><strong>Availability</strong><span>=Never Give Up</span></div>
+      </div>
+    </section>
+
+    <!-- ORIGINAL SKILLS SECTION (kept) -->
+    <section id="skills" class="section card">
+      <h2>Top Skills & Tools</h2>
+
+      <div class="skills-grid new-skills-grid">
+        <div class="skill">
+          <div class="skill-name">HTML</div>
+          <div class="meter" data-fill="95"><div style="width:0%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-name">CSS (incl. small animations)</div>
+          <div class="meter" data-fill="92"><div style="width:0%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-name">JavaScript</div>
+          <div class="meter" data-fill="40"><div style="width:0%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-name">WordPad</div>
+          <div class="meter" data-fill="95"><div style="width:0%"></div></div>
+        </div>
+
+        
+      </div>
+
+      <p style="opacity:.85; margin-top:12px">transparent.</p>
+    </section>
+
+    <!-- NEW Animated Floating Skill Cards Section (GALAXY) -->
+    <section class="section card">
+      <div class="skills-heading"><span class="typewriter-small">Advanced — Skills</span></div>
+
+      <div class="skills-animated" id="animatedSkills">
+        <div class="skill-card float" data-level="95"><div class="skill-title">HTML</div><div class="bar-container"><div class="bar"></div></div></div>
+        <div class="skill-card float" data-level="90"><div class="skill-title">CSS</div><div class="bar-container"><div class="bar"></div></div></div>
+        <div class="skill-card float" data-level="40"><div class="skill-title">JavaScript</div><div class="bar-container"><div class="bar"></div></div></div>
+        <div class="skill-card float" data-level="85"><div class="skill-title">Canva</div><div class="bar-container"><div class="bar"></div></div></div>
+        <div class="skill-card float" data-level="75"><div class="skill-title">Excel</div><div class="bar-container"><div class="bar"></div></div></div>
+        <div class="skill-card float" data-level="95"><div class="skill-title">WordPad</div><div class="bar-container"><div class="bar"></div></div></div>
+        <div class="skill-card float" data-level="40"><div class="skill-title">Python</div><div class="bar-container"><div class="bar"></div></div></div>
+        <div class="skill-card float" data-level="50"><div class="skill-title">Power point</div><div class="bar-container"><div class="bar"></div></div></div>
+
+      </div>
+      <div class="skill-pills-wrap" style="grid-column: 1 / -1; margin-top:12px;">
+          <div class="pill">✨ Power point</div>
+          <div class="pill">🎨 Canva</div>
+          <div class="pill">📊 Excel</div>
+          <div class="pill">📄 WordPad</div>
+          <div class="pill">💫 CorelDRAW</div>
+          <div class="pill">📧 Photoshop</div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section card">
+      <h2>Selected Projects</h2>
+      <div class="projects-grid">
+        <article class="project card">
+    <a href="story.html" style="text-decoration:none; color:inherit;">
+      <img src="male0001.png" alt="men.001" style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+      <div style="padding:12px">
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3D Animations</h3>
+        <p>Click to open story.html — 3D Animations Using HTML , CSS & JS.</p>
+      </div>
+    </a>
+  </article>
+    
+  <article class="project card">
+    <a href="project4.html" style="text-decoration:none; color:inherit;">
+      <img src="1.png.png" alt="men.001" style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+      <div style="padding:12px">
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pong Game</h3>
+        <p>Click to open project.html — Pong Game Using HTML , CSS & JS.</p>
+      </div>
+    </a>
+     </article>
+  <article class="project card">
+    <a href="scroll.html" style="text-decoration:none; color:inherit;">
+      <img src="thumbnail.png" alt="men.001" style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+      <div style="padding:12px">
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search Top Engineering Colleges in India</h3>
+        <p>Click to open scoll.html —  Trending FoodUsing HTML , CSS .</p>
+      </div>
+    </a>
+  </article>
+  </article>
+  <article class="project card">
+    <a href="ma.html" style="text-decoration:none; color:inherit;">
+      <img src="coll.png" alt="men.001" style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+      <div style="padding:12px">
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search Top Engineering Colleges in India</h3>
+        <p>Click to open ma.html —  Search Top Engineering Colleges in India Using HTML , CSS .</p>
+      </div>
+    </a>
+  </article>
+
+
+  <article class="project card">
+    <a href="project1.html" style="text-decoration:none; color:inherit;">
+      <img src="birt.png" alt="men.001" style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+      <div style="padding:12px">
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Birthday Card</h3>
+        <p>Click to open project1.html — Birthday Card Using HTML , CSS & JS.</p>
+      </div>
+    </a>
+  </article>
+
+   <article class="project card">
+    <a href="pr6.5.html" style="text-decoration:none; color:inherit;">
+      <img src="p.jpeg" alt="men.001" style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+      <div style="padding:12px">
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 Webspages</h3>
+        <p>Click to open pr6.5.html — 2 Webspages Using HTML , CSS & JS.</p>
+      </div>
+    </a>
+  </article>
+  <article class="project card">
+    <a href="pr.html" style="text-decoration:none; color:inherit;">
+      <img src="logo (1).png" alt="men.001" style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+      <div style="padding:12px">
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spotify</h3>
+        <p>Click to open pr.html — Spotify cone Using HTML , CSS .</p>
+      </div>
+    </a>
+  </article>
+
+   <article class="project card">
+    <a href="index.html" style="text-decoration:none; color:inherit;">
+      <img src="clock.png" alt="men.001" style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+      <div style="padding:12px">
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spotify</h3>
+        <p>Click to open pr.html — Spotify cone Using HTML , CSS .</p>
+      </div>
+    </a>
+  </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section card">
+      <h2>Contact</h2>
+      <form id="contactForm" class="contact-form">
+        <div style="display:flex;gap:10px">
+          <input id="name" type="text" placeholder="Your name" required style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)">
+          <input id="email" type="email" placeholder="Your email" required style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)">
+          <input id="Phone.No" type="email" placeholder="Phone.No" required style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)">
+
+        </div>
+        <textarea id="message" rows="5" placeholder="Message" style="width:98%;margin-top:10px;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)"></textarea>
+        <div style="display:flex;gap:12px;align-items:center;margin-top:12px">
+          <button class="btn primary" type="submit">Send Message</button>
+          <div id="formStatus" aria-live="polite" style="color:var(--muted)"></div>
+        </div>
+      </form>
+    </section>
+
+    <footer class="card footer" style="display:flex;justify-content:space-between;align-items:center">
+      <div><span id="year"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thank You </div>
+    
+    </footer>
+
+  </main>
+   <script src="profile.js"></script>
+
+ </body>
+</html>
